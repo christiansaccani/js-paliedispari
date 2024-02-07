@@ -6,23 +6,17 @@
 
 const userWord = prompt("Inserisci una parola, vediamo se è palindroma: ");
 console.log(userWord);
-let revWord;
+let revWord = true;
 
 function palindromia () {
 
     for (let i = 0; i < userWord.length; i++) {
 
-        if (userWord[i] === userWord[(userWord.length - 1 - i)]) {
-
-            
-            revWord = true;
-
-        } else {
-
-            
-            revWord = false;
-
-        }       
+            if (userWord[i] !== userWord[(userWord.length - 1 - i)]) {
+                
+                revWord = false;
+  
+        }
     }
 
     if (revWord == true) {

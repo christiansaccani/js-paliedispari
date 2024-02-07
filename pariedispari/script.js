@@ -29,19 +29,17 @@ function pariODispari() {
 
 if (userChoice == "pari" || userChoice == "dispari") {
 
-    console.log(userChoice);
     const userNum = Number(prompt("Scegli un valore da 1 a 5: "));
 
     if (!Number.isNaN(userNum) && userNum > 0 && userNum < 6) {
 
-        console.log(userNum);
+        
         let computerChoice = randomNum();
-        console.log(computerChoice);
-        sum = userNum + computerChoice;
-        console.log("la somma è", sum);
-        const result = pariODispari();
-        console.log(result);
 
+        sum = userNum + computerChoice;
+
+        const result = pariODispari();
+        
         if (result === userChoice) {
             document.querySelector("div").append(`Il computer ha scelto ${computerChoice}, con il totale di ${sum} hai vinto!`);
 
